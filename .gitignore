@@ -1,0 +1,8 @@
+*.cfacts
+*.crules
+*.cooked
+*.data
+*.graph
+programFiles.arg
+
+data
