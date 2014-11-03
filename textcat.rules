@@ -1,3 +1,6 @@
-predict(D,Y) :- hasWord(D,W),inDoc(W,D2),predict(D2,Y) # r.
+predict(D,Y) :- predict(D,Y,1)
+predict(D,Y,P) :- hasWord(D,W),inDoc(W,D2),next(P,N),predict(D2,Y,N) # p(P).
 
 predict(D,Y) :- seed(D,Y) # r.
+
+seed(D,Y) :- labeled(D,Y) # r.
