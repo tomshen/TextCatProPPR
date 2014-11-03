@@ -1,4 +1,3 @@
 predict(D,Y) :- hasWord(D,W),inDoc(W,D2),predict(D2,Y) # r.
 
 predict(D,Y) :- seed(D,Y) # r.
-seed(D,Y) :- # s(D,Y).
