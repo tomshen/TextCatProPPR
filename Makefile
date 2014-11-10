@@ -13,7 +13,8 @@ run:
 	cd $(PROPPR_PATH) && java -cp '.:bin/:lib/*:conf/' \
 	edu.cmu.ml.praprolog.Experiment --programFiles $(shell cat programFiles.arg) \
 	--train $(PWD)/train.data --output $(PWD)/train.cooked \
-	--test $(PWD)/test.data --params $(PWD)/params.wts --prover dpr:0.0001:0.0001:adjust && cd $(PWD)
+	--test $(PWD)/test.data --params $(PWD)/params.wts --prover dpr:0.0001:0.1:adjust \
+	--threads 12 && cd $(PWD)
 
 data:
 	./process.py

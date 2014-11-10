@@ -20,7 +20,7 @@ def read_raw_labels(labels_path, offset=0):
         doc = offset+1
         for line in f:
             label = line.strip()
-            yield 'w' + str(doc), 'l' + label
+            yield 'd' + str(doc), 'l' + label
             doc += 1
 
 def write_labels(data, data_path, labels):
